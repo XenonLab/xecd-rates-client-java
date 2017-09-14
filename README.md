@@ -8,9 +8,9 @@
 
 XE.com Inc. is the World's Trusted Currency Authority. This project provides an SDK to interface with our XE Currency Data (XECD) product.
 
-XE Currency Data is a web service that gives you access live and historic mid-market conversion rates between all of our supported currencies. 
+XE Currency Data is a REST API that gives you access to live and historic mid-market exchange rates between all of our supported currencies. 
 
-You will need an api key and secret to use this sdk. Sign up for a [free trial][5] or register for a [full account][6].
+You will need an api key and secret to use this SDK. Sign up for a [free trial][5] or register for a [full account][6].
 
 ## Installation
 
@@ -79,7 +79,7 @@ public class Main
 
 ## Contributing
 
-xecd-rates-client-php is an open-source project. Submit a pull request to contribute!
+xecd-rates-client-java is an open-source project. Submit a pull request to contribute!
 
 ## Testing
 
