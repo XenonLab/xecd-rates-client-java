@@ -9,6 +9,9 @@ version = '0.1.0'
 
 description = "XE Currency Data API Client"
 
+def ossrhUsername = project.findProperty('ossrhUsername') ?: null;
+def ossrhPassword = project.findProperty('ossrhPassword') ?: null;
+
 task javadocJar(type: Jar) {
     classifier = 'javadoc'
     from javadoc
@@ -24,6 +27,7 @@ artifacts {
 }
 
 signing {
+	required ossrhUsername != null && ossrhPassword != null
     sign configurations.archives
 }
 
