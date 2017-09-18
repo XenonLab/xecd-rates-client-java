@@ -14,12 +14,7 @@ You will need an api key and secret to use this SDK. Sign up for a [free trial][
 
 ## Installation
 
-The preferred way to install this package is by cloning it from github and building it locally. This package uses the [gradle][4] build system.
-
-```bash
-cd xecd-rates-client-java
-./gradlew publishToMavenLocal
-```
+The preferred way to install this package is from [Maven Central][4].
 
 To add a dependency on XECD Rates Client using Maven, use the following:
 
@@ -63,7 +58,7 @@ public class Main
     apiService = XecdApiServiceFactory.createXecdAPIService(config);
 
     try {
-      HistoricRatesResponse historicRatesResponse = apiService.historicRate("CAD", "USD,GBP", "2017-09-14", null, 1.00, false, false);
+      HistoricRateResponse historicRateResponse = apiService.historicRate("CAD", "USD,GBP", "2017-09-14", null, 1.00, false, false);
     }
     catch(XecdApiException e)
     {
@@ -106,6 +101,6 @@ If you discover a security vulnerability within this package, please **DO NOT** 
 [1]: http://www.xe.com
 [2]: http://www.xe.com/xecurrencydata/XE_Currency_Data_API_Specifications.pdf
 [3]: http://semver.org/
-[4]: https://gradle.org/
+[4]: http://search.maven.org/
 [5]: https://xecd.xe.com/account/signup.php?freetrial
 [6]: http://www.xe.com/xecurrencydata/
