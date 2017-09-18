@@ -27,7 +27,7 @@ artifacts {
 }
 
 signing {
-	required ossrhUsername != null && ossrhPassword != null
+    required ossrhUsername != null && ossrhPassword != null
     sign configurations.archives
 }
 
