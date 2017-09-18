@@ -63,7 +63,7 @@ public class Main
     apiService = XecdApiServiceFactory.createXecdAPIService(config);
 
     try {
-      HistoricRatesResponse historicRatesResponse = apiService.historicRate("CAD", "USD,GBP", "2017-09-14", null, 1.00, false, false);
+      HistoricRateResponse historicRateResponse = apiService.historicRate("CAD", "USD,GBP", "2017-09-14", null, 1.00, false, false);
     }
     catch(XecdApiException e)
     {
