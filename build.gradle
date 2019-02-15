@@ -12,6 +12,10 @@ description = "XE Currency Data API Client"
 def ossrhUsername = project.findProperty('ossrhUsername') ?: null;
 def ossrhPassword = project.findProperty('ossrhPassword') ?: null;
 
+repositories {
+    jcenter()
+}
+
 task javadocJar(type: Jar) {
     classifier = 'javadoc'
     from javadoc
