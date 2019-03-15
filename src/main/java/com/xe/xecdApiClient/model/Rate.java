@@ -5,7 +5,8 @@ public class Rate
 {
 	private String quotecurrency;
 	private Double mid;
-	
+	private Double inverse;
+
 	public Rate()
 	{
 		//default
@@ -32,5 +33,13 @@ public class Rate
 	public void setMid(Double mid)
 	{
 		this.mid = mid;
+	}
+	public Double getInverse()
+	{
+		return inverse;
+	}
+	public void setInverse(Double inverse)
+	{
+		this.inverse = inverse;
 	}
 }
