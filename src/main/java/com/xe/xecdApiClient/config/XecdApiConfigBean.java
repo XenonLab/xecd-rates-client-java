@@ -9,6 +9,7 @@ public class XecdApiConfigBean
 	private String apiKey;
 	private String serverPrefix;
 	private Integer connectTimeout;
+	private Boolean useSystemProperties;
 
 	public String getAccountId()
 	{
@@ -54,5 +55,13 @@ public class XecdApiConfigBean
 	public void setConnectTimeout(Integer connectTimeout)
 	{
 		this.connectTimeout = connectTimeout;
+	}
+
+	public Boolean useSystemProperties() {
+		return useSystemProperties;
+	}
+
+	public void setUseSystemProperties(final Boolean useSystemProperties) {
+		this.useSystemProperties = useSystemProperties;
 	}
 }

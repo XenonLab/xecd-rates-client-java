@@ -61,30 +61,30 @@ public class XecdApiServiceImpl implements XecdApiService
 		this.apiKey = config.getApiKey();
 		this.serverPrefix = config.getServerPrefix() != null ? config.getServerPrefix() : this.serverPrefix;
 		this.jsonUtils = new JsonUtils();
-		this.wsClient = new XecdHttpClientImpl(config.getConnectTimeout());
+		this.wsClient = new XecdHttpClientImpl(config.getConnectTimeout(), config.useSystemProperties());
 	}
 
 	/**
 	 * Looks at the environment variables to satisfy required properties
 	 * - XECD_ACCOUNT_ID
 	 * - XECD_API_KEY
-	 * @throws XecdApiException 
+	 * @throws XecdApiException
 	 */
 	XecdApiServiceImpl() throws XecdApiException
 	{
 		String apiKeyVar = System.getenv("XECD_API_KEY");
 		String accountIdVar = System.getenv("XECD_ACCOUNT_ID");
-		
-		this.wsClient = new XecdHttpClientImpl(null);
-		
+
+		this.wsClient = new XecdHttpClientImpl(null, null);
+
 		if(apiKeyVar != null && accountIdVar != null && !apiKeyVar.isEmpty() && !accountIdVar.isEmpty())
 		{
 			logger.debug("INITIALIZING WITH ENVIRONMENT VARIABLES");
-			
+
 			this.apiKey = System.getenv("XECD_API_KEY");
 			this.accountId = System.getenv("XECD_ACCOUNT_ID");
 			this.jsonUtils = new JsonUtils();
-			
+
 		}
 		else
 		{
