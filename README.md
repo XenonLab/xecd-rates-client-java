@@ -1,6 +1,6 @@
 <p align="">
     <a href="http://www.xe.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/55/XE_Corporation_logo.png" width="90" height="72"/>
+        <img src="https://avatars.githubusercontent.com/u/8235441?s=96&v=4"/>
     </a>
 </p>
 
