@@ -31,7 +31,7 @@ public class XecdHttpClientImpl implements XecdHttpClient
 
 	public XecdHttpClientImpl(Integer connectTimeout)
 	{
-		HttpClientBuilder builder = HttpClientBuilder.create();
+		HttpClientBuilder builder = HttpClientBuilder.create().useSystemProperties();
 		if (connectTimeout != null)
 		{
 			RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(connectTimeout).build();
