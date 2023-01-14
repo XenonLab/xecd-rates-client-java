@@ -29,13 +29,16 @@ public class XecdHttpClientImpl implements XecdHttpClient
 
 	private HttpClient client = null;
 
-	public XecdHttpClientImpl(Integer connectTimeout)
+	public XecdHttpClientImpl(Integer connectTimeout, Boolean useSystemProperties)
 	{
 		HttpClientBuilder builder = HttpClientBuilder.create();
 		if (connectTimeout != null)
 		{
 			RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(connectTimeout).build();
 			builder.setDefaultRequestConfig(requestConfig);
+		}
+		if(useSystemProperties != null && useSystemProperties) {
+			builder.useSystemProperties();
 		}
 		try
 		{
