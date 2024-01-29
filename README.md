@@ -22,7 +22,7 @@ To add a dependency on XECD Rates Client using Maven, use the following:
 <dependency>
   <groupId>com.xe.xecd</groupId>
   <artifactId>xecd-rates-client</artifactId>
-  <version>0.1</version>
+  <version>0.1.0</version>
 </dependency>
 ```
 
